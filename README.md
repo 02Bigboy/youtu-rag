@@ -610,12 +610,50 @@ Youtu-RAG provides a complete evaluation system, supporting multi-dimensional ca
 
 <div align="center">
 
-| Dataset Overview | Dataset | Multi-table-mini | Complex Excel | Multi-table | Domain Table |
-|:---:|:---|:---:|:---:|:---:|:---:|
-| | **Data Volume** | 245 | 931 | 1,390 | 100 |
-| | **Type** | Multi-table | Complex Questions | Multi-table Full | Domain Knowledge |
-| **Baseline** | Vanna | 45.71% | 38.64% | 35.11% | 9.00% |
-| **🎯 Youtu-RAG** | **Text2SQL Agent** | **69.39%** ↑ | **57.36%** ↑ | **67.27%** ↑ | **27.00%** ↑ |
+<table>
+<thead>
+<tr>
+<th rowspan="3" align="center">Dataset Overview</th>
+<th align="left">Dataset</th>
+<th align="center">Multi-table-mini</th>
+<th align="center">Complex Excel</th>
+<th align="center">Multi-table</th>
+<th align="center">Domain Table</th>
+</tr>
+<tr>
+<th align="left"><strong>Data Volume</strong></th>
+<th align="center">245</th>
+<th align="center">931</th>
+<th align="center">1,390</th>
+<th align="center">100</th>
+</tr>
+<tr>
+<th align="left"><strong>Type</strong></th>
+<th align="center">Multi-table</th>
+<th align="center">Complex Questions</th>
+<th align="center">Multi-table Full</th>
+<th align="center">Domain Knowledge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Baseline</strong></td>
+<td align="left">Vanna</td>
+<td align="center">45.71%</td>
+<td align="center">38.64%</td>
+<td align="center">35.11%</td>
+<td align="center">9.00%</td>
+</tr>
+<tr>
+<td align="center"><strong>🎯 Youtu-RAG</strong></td>
+<td align="left"><strong>Text2SQL Agent</strong></td>
+<td align="center"><strong>69.39%</strong> ↑</td>
+<td align="center"><strong>57.36%</strong> ↑</td>
+<td align="center"><strong>67.27%</strong> ↑</td>
+<td align="center"><strong>27.00%</strong> ↑</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 
@@ -633,15 +671,71 @@ Youtu-RAG provides a complete evaluation system, supporting multi-dimensional ca
 
 <div align="center">
 
-| Category | Methods | Accuracy | Analysis Depth | Feasibility | Aesthetics |
-|:---:|:---|:---:|:---:|:---:|:---:|
-| **Baselines** | TableGPT2-7B | 8.4 | 5.1 | 4.3 | 6.2 |
-| | StructGPT | 6.22 | 3.84 | 3.12 | 4.5 |
-| | TableLLM-7B | 4.1 | 2.1 | 1.8 | 2.3 |
-| | ST-Raptor | 22.4 | 6.0 | 7.4 | 12.4 |
-| | TreeThinker | 31.0 | 22.8 | 21.4 | 36.8 |
-| | Code Loop | 27.5 | 9.5 | 14.9 | 20.4 |
-| **🎯 Youtu-RAG** | **Excel Agent** | **37.5** ↑ | **30.2** ↑ | **27.6** ↑ | **42.6** ↑ |
+<table>
+<thead>
+<tr>
+<th align="center">Category</th>
+<th align="left">Methods</th>
+<th align="center">Accuracy</th>
+<th align="center">Analysis Depth</th>
+<th align="center">Feasibility</th>
+<th align="center">Aesthetics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="6" align="center"><strong>Baselines</strong></td>
+<td align="left">TableGPT2-7B</td>
+<td align="center">8.4</td>
+<td align="center">5.1</td>
+<td align="center">4.3</td>
+<td align="center">6.2</td>
+</tr>
+<tr>
+<td align="left">StructGPT</td>
+<td align="center">6.22</td>
+<td align="center">3.84</td>
+<td align="center">3.12</td>
+<td align="center">4.5</td>
+</tr>
+<tr>
+<td align="left">TableLLM-7B</td>
+<td align="center">4.1</td>
+<td align="center">2.1</td>
+<td align="center">1.8</td>
+<td align="center">2.3</td>
+</tr>
+<tr>
+<td align="left">ST-Raptor</td>
+<td align="center">22.4</td>
+<td align="center">6.0</td>
+<td align="center">7.4</td>
+<td align="center">12.4</td>
+</tr>
+<tr>
+<td align="left">TreeThinker</td>
+<td align="center">31.0</td>
+<td align="center">22.8</td>
+<td align="center">21.4</td>
+<td align="center">36.8</td>
+</tr>
+<tr>
+<td align="left">Code Loop</td>
+<td align="center">27.5</td>
+<td align="center">9.5</td>
+<td align="center">14.9</td>
+<td align="center">20.4</td>
+</tr>
+<tr>
+<td align="center"><strong>🎯 Youtu-RAG</strong></td>
+<td align="left"><strong>Excel Agent</strong></td>
+<td align="center"><strong>37.5</strong> ↑</td>
+<td align="center"><strong>30.2</strong> ↑</td>
+<td align="center"><strong>27.6</strong> ↑</td>
+<td align="center"><strong>42.6</strong> ↑</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 
@@ -654,16 +748,60 @@ Youtu-RAG provides a complete evaluation system, supporting multi-dimensional ca
 
 <div align="center">
 
-| Dataset Overview | Dataset | FactGuard | Sequential-NIAH |
-|:---:|:---|:---:|:---:|
-| | **Data Volume** | 700 | 2,000 |
-| | **Type** | Long-text Q&A (Single-point) | Long-text Q&A (Multi-point) |
-| **Baselines** | Naive Retrieval Top3 | 79.86% | 14.20% |
-| | Naive Retrieval Top5 | 80.71% | 29.75% |
-| | Naive Retrieval Top10 | 82.71% | 57.25% |
-| | Naive Retrieval Top15 | 83.00% | 70.15% |
-| **🎯 Youtu-RAG** | **KB Search Agent** | **88.27%** ↑ | **85.05%** ↑ |
-| | **File QA Agent** | **88.29%** ↑ | **60.80%** * |
+<table>
+<thead>
+<tr>
+<th rowspan="3" align="center">Dataset Overview</th>
+<th align="left">Dataset</th>
+<th align="center">FactGuard</th>
+<th align="center">Sequential-NIAH</th>
+</tr>
+<tr>
+<th align="left"><strong>Data Volume</strong></th>
+<th align="center">700</th>
+<th align="center">2,000</th>
+</tr>
+<tr>
+<th align="left"><strong>Type</strong></th>
+<th align="center">Long-text Q&amp;A (Single-point)</th>
+<th align="center">Long-text Q&amp;A (Multi-point)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="4" align="center"><strong>Baselines</strong></td>
+<td align="left">Naive Retrieval Top3</td>
+<td align="center">79.86%</td>
+<td align="center">14.20%</td>
+</tr>
+<tr>
+<td align="left">Naive Retrieval Top5</td>
+<td align="center">80.71%</td>
+<td align="center">29.75%</td>
+</tr>
+<tr>
+<td align="left">Naive Retrieval Top10</td>
+<td align="center">82.71%</td>
+<td align="center">57.25%</td>
+</tr>
+<tr>
+<td align="left">Naive Retrieval Top15</td>
+<td align="center">83.00%</td>
+<td align="center">70.15%</td>
+</tr>
+<tr>
+<td rowspan="2" align="center"><strong>🎯 Youtu-RAG</strong></td>
+<td align="left"><strong>KB Search Agent</strong></td>
+<td align="center"><strong>88.27%</strong> ↑</td>
+<td align="center"><strong>85.05%</strong> ↑</td>
+</tr>
+<tr>
+<td align="left"><strong>File QA Agent</strong></td>
+<td align="center"><strong>88.29%</strong> ↑</td>
+<td align="center"><strong>60.80%</strong> *</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 
@@ -681,14 +819,62 @@ Youtu-RAG provides a complete evaluation system, supporting multi-dimensional ca
 
 <div align="center">
 
-| Dataset | Data Volume | Metric | Baseline<br/>(Naive Retrieval) | Youtu-RAG<br/>(Meta Retrieval Agent) | Improvement |
-|:---|:---:|:---|:---:|:---:|:---:|
-| **Timeliness Preference** | 183 | Recall@all | 34.52% | **41.92%** | +7.40% ↑ |
-| | | NDCG_w@5 | 29.91% | **43.57%** | +13.66% ↑ |
-| **Popularity Preference** | 301 | Recall@all | 26.19% | **47.20%** | +21.01% ↑ |
-| | | NDCG_w@5 | 29.86% | **54.31%** | +24.45% ↑ |
-| **Average** | 483 | Recall@all | 29.34% | **45.21%** | +15.87% ↑ |
-| | | NDCG_w@5 | 29.88% | **50.25%** | +20.37% ↑ |
+<table>
+<thead>
+<tr>
+<th align="left">Dataset</th>
+<th align="center">Data Volume</th>
+<th align="left">Metric</th>
+<th align="center">Baseline<br/>(Naive Retrieval)</th>
+<th align="center">Youtu-RAG<br/>(Meta Retrieval Agent)</th>
+<th align="center">Improvement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2" align="left"><strong>Timeliness Preference</strong></td>
+<td rowspan="2" align="center">183</td>
+<td align="left">Recall@all</td>
+<td align="center">34.52%</td>
+<td align="center"><strong>41.92%</strong></td>
+<td align="center">+7.40% ↑</td>
+</tr>
+<tr>
+<td align="left">NDCG_w@5</td>
+<td align="center">29.91%</td>
+<td align="center"><strong>43.57%</strong></td>
+<td align="center">+13.66% ↑</td>
+</tr>
+<tr>
+<td rowspan="2" align="left"><strong>Popularity Preference</strong></td>
+<td rowspan="2" align="center">301</td>
+<td align="left">Recall@all</td>
+<td align="center">26.19%</td>
+<td align="center"><strong>47.20%</strong></td>
+<td align="center">+21.01% ↑</td>
+</tr>
+<tr>
+<td align="left">NDCG_w@5</td>
+<td align="center">29.86%</td>
+<td align="center"><strong>54.31%</strong></td>
+<td align="center">+24.45% ↑</td>
+</tr>
+<tr>
+<td rowspan="2" align="left"><strong>Average</strong></td>
+<td rowspan="2" align="center">483</td>
+<td align="left">Recall@all</td>
+<td align="center">29.34%</td>
+<td align="center"><strong>45.21%</strong></td>
+<td align="center">+15.87% ↑</td>
+</tr>
+<tr>
+<td align="left">NDCG_w@5</td>
+<td align="center">29.88%</td>
+<td align="center"><strong>50.25%</strong></td>
+<td align="center">+20.37% ↑</td>
+</tr>
+</tbody>
+</table>
 
 </div>
   
