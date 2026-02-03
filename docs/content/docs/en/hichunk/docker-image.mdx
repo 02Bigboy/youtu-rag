@@ -1,8 +1,8 @@
 ---
-title: Deploying HiChunk with Docker
+title: Deploying with Docker
 ---
 
-This document provides instructions for building a self-contained Docker image for HiChunk that includes all model weights and dependencies.
+This document provides instructions for building a self-contained Docker image for Youtu HiChunk that includes all model weights and dependencies.
 
 **Requirements:**
 - Docker installed on your system
@@ -18,29 +18,29 @@ mkdir hichunk-docker && cd hichunk-docker
 
 # Download the model weights
 git lfs install
-git clone https://huggingface.co/tencent/HiChunk
+git clone https://huggingface.co/tencent/Youtu-HiChunk
 ```
 
 # Creating the Custom vLLM Model Files
 
-HiChunk requires custom model files to be registered with vLLM. Create the following files in your build directory.
+Youtu HiChunk requires custom model files to be registered with vLLM. Create the following files in your build directory.
 
 ## utu_v1.py
 
-Create a file named `utu_v1.py` with the HiChunk model implementation. You can copy this file from the downloaded `HiChunk` directory or from the [local deployment guide](/docs/en/hichunk/deploying_locally).
+Create a file named `utu_v1.py` with the Youtu HiChunk model implementation. You can copy this file from the downloaded `Youtu-HiChunk` directory or from the [local deployment guide](/docs/en/hichunk/deploying-locally).
 
 ```bash
 # Copy from the downloaded model directory
-cp HiChunk/utu_v1.py ./utu_v1.py
+cp Youtu-HiChunk/utu_v1.py ./utu_v1.py
 ```
 
 ## registry.py
 
-Create a file named `registry.py` with the updated vLLM model registry. You can copy this file from the downloaded `HiChunk` directory or from the [local deployment guide](/docs/en/hichunk/deploying_locally).
+Create a file named `registry.py` with the updated vLLM model registry. You can copy this file from the downloaded `HiChunk` directory or from the [local deployment guide](/docs/en/hichunk/deploying-locally).
 
 ```bash
 # Copy from the downloaded model directory
-cp HiChunk/registry.py ./registry.py
+cp Youtu-HiChunk/registry.py ./registry.py
 ```
 
 # Creating the Dockerfile
@@ -62,7 +62,7 @@ COPY utu_v1.py /usr/local/lib/python3.12/dist-packages/vllm/model_executor/model
 COPY registry.py /usr/local/lib/python3.12/dist-packages/vllm/model_executor/models/registry.py
 
 # Copy the model weights into the container
-COPY HiChunk/ /app/HiChunk/
+COPY Youtu-HiChunk/ /app/HiChunk/
 
 # Set environment variables
 ENV MODEL_PATH=/app/HiChunk
@@ -143,7 +143,7 @@ docker pull your-registry.com/hichunk:latest
 docker run --gpus all -p 8501:8501 your-registry.com/hichunk:latest
 ```
 
-The HiChunk service will be available at `http://<remote-machine-ip>:8501`.
+The Youtu HiChunk service will be available at `http://<remote-machine-ip>:8501`.
 
 # Final Directory Structure
 

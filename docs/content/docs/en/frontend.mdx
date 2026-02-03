@@ -3,10 +3,6 @@ title: WebUI User Guide
 description: Youtu-RAG provides a lightweight WebUI interface supporting core features including file management, knowledge base management, and intelligent conversations.
 ---
 
-# WebUI User Guide
-
-Youtu-RAG provides a lightweight WebUI interface supporting core features including file management, knowledge base management, and intelligent conversations.
-
 ## Access URL
 
 After starting the service, access the following URLs:
@@ -26,10 +22,6 @@ After starting the service, access the following URLs:
 3. Click the **"Upload File"** button
 4. Based on the file type and file management configuration, files will be processed through different paths and generate previewable content
 
-#### Feature Description
-
-{/* TODO: Add detailed file upload instructions */}
-
 #### Supported File Types
 
 - **PDF/Word/MD**: Document files
@@ -41,50 +33,52 @@ After starting the service, access the following URLs:
 #### Demo Examples
 
 <table>
-  <tr>
-    <td className="demo-cell demo-cell-50">
-      <strong>File Upload Example</strong><br />Automatically extract metadata and generate summaries
-    </td>
-    <td className="demo-cell demo-cell-50">
-      <strong>PDF File Preview After Processing</strong><br />Requires OCR configuration support
-    </td>
-  </tr>
-  <tr>
-    <td className="demo-cell demo-cell-50">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/01_upload_file.mov" 
-             controls muted preload="metadata" 
-             width="100%" 
-             className="demo-video"></video>
-    </td>
-    <td className="demo-cell demo-cell-50">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/02_pdf_file_example.mov" 
-             controls muted preload="metadata" 
-             width="100%" 
-             className="demo-video"></video>
-    </td>
-  </tr>
-  <tr>
-    <td className="demo-cell demo-cell-50">
-      <strong>PNG File Preview After Processing</strong><br />Requires OCR configuration support
-    </td>
-    <td className="demo-cell demo-cell-50">
-      <strong>HiChunk Parse Preview</strong><br />Requires HiChunk configuration support
-    </td>
-  </tr>
-  <tr>
-    <td className="demo-cell demo-cell-50">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/03_png_file_example.mov" 
-             controls muted preload="metadata" 
-             width="100%" 
-             className="demo-video"></video>
-    </td>
-    <td className="demo-cell demo-cell-50">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/04_hichunk_example.mov" 
-             controls muted preload="metadata" 
-             width="100%" 
-             className="demo-video"></video>
-    </td>
-  </tr>
+  <tbody>
+    <tr>
+      <td className="demo-cell demo-cell-50">
+        <strong>File Upload Example</strong><br />Automatically extract metadata and generate summaries
+      </td>
+      <td className="demo-cell demo-cell-50">
+        <strong>PDF File Preview After Processing</strong><br />Requires OCR configuration support
+      </td>
+    </tr>
+    <tr>
+      <td className="demo-cell demo-cell-50">
+        <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/01_upload_file.mov" 
+               controls muted preload="metadata" 
+               width="100%" height="100%"
+               className="demo-video"></video>
+      </td>
+      <td className="demo-cell demo-cell-50">
+        <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/02_pdf_file_example.mov" 
+               controls muted preload="metadata" 
+               width="100%" height="100%"
+               className="demo-video"></video>
+      </td>
+    </tr>
+    <tr>
+      <td className="demo-cell demo-cell-50">
+        <strong>PNG File Preview After Processing</strong><br />Requires OCR configuration support
+      </td>
+      <td className="demo-cell demo-cell-50">
+        <strong>HiChunk Parse Preview</strong><br />Requires HiChunk configuration support
+      </td>
+    </tr>
+    <tr>
+      <td className="demo-cell demo-cell-50">
+        <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/03_png_file_example.mov" 
+               controls muted preload="metadata" 
+               width="100%" height="100%"
+               className="demo-video"></video>
+      </td>
+      <td className="demo-cell demo-cell-50">
+        <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/04_hichunk_example.mov" 
+               controls muted preload="metadata" 
+               width="100%" height="100%"
+               className="demo-video"></video>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 > 💡 **Tip**: For OCR and HiChunk configuration, refer to the [Environment Variables Configuration Documentation](environment-variables)
@@ -92,10 +86,6 @@ After starting the service, access the following URLs:
 ---
 
 ### 1.2 Batch File Management
-
-#### Steps
-
-{/* TODO: Add detailed batch management instructions */}
 
 #### Feature Description
 
@@ -111,37 +101,39 @@ When OCR and HiChunk configuration are enabled, the parsing stage of document up
 #### Demo Examples
 
 <table>
-  <tr>
-    <td className="demo-cell demo-cell-33">
-      <strong>Batch File Delete and Upload</strong><br />Recommended to batch import files of the same type at once
-    </td>
-    <td className="demo-cell demo-cell-33">
-      <strong>Batch File Metadata Editing</strong><br />Supports batch export, editing, and importing
-    </td>
-    <td className="demo-cell demo-cell-33">
-      <strong>File Search</strong><br />Supports file name, metadata, summary, etc.
-    </td>
-  </tr>
-  <tr>
-    <td className="demo-cell demo-cell-33">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/06_batch_delete_upload.mov" 
-             controls muted preload="metadata" 
-             width="100%" 
-             className="demo-video"></video>
-    </td>
-    <td className="demo-cell demo-cell-33">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/05_metadata_export_import.mov" 
-             controls muted preload="metadata" 
-             width="100%" 
-             className="demo-video"></video>
-    </td>
-    <td className="demo-cell demo-cell-33">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/07_file_search.mov" 
-             controls muted preload="metadata" 
-             width="100%" 
-             className="demo-video"></video>
-    </td>
-  </tr>
+  <tbody>
+    <tr>
+      <td className="demo-cell demo-cell-33">
+        <strong>Batch File Delete and Upload</strong><br />Recommended to batch import files of the same type at once
+      </td>
+      <td className="demo-cell demo-cell-33">
+        <strong>Batch File Metadata Editing</strong><br />Supports batch export, editing, and importing
+      </td>
+      <td className="demo-cell demo-cell-33">
+        <strong>File Search</strong><br />Supports file name, metadata, summary, etc.
+      </td>
+    </tr>
+    <tr>
+      <td className="demo-cell demo-cell-33">
+        <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/06_batch_delete_upload.mov" 
+               controls muted preload="metadata" 
+               width="100%" height="100%"
+               className="demo-video"></video>
+      </td>
+      <td className="demo-cell demo-cell-33">
+        <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/05_metadata_export_import.mov" 
+               controls muted preload="metadata" 
+               width="100%" height="100%"
+               className="demo-video"></video>
+      </td>
+      <td className="demo-cell demo-cell-33">
+        <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/07_file_search.mov" 
+               controls muted preload="metadata" 
+               width="100%" height="100%"
+               className="demo-video"></video>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 ---
@@ -158,35 +150,33 @@ When OCR and HiChunk configuration are enabled, the parsing stage of document up
 4. Fill in the knowledge base name (e.g., `Technical Documentation`)
 5. Click to confirm creation
 
-#### Feature Description
-
-{/* TODO: Add detailed knowledge base creation and deletion instructions */}
-
 #### Demo Examples
 
 <table>
-  <tr>
-    <td className="demo-cell demo-cell-50">
-      <strong>Knowledge Base Creation and Deletion</strong><br />Only supports single knowledge base operations
-    </td>
-    <td className="demo-cell demo-cell-50">
-      <strong>Knowledge Base Search</strong><br />Supports knowledge base name and description search
-    </td>
-  </tr>
-  <tr>
-    <td className="demo-cell demo-cell-50">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/08_kb_create_delete.mov" 
-             controls muted preload="metadata" 
-             width="100%" 
-             className="demo-video"></video>
-    </td>
-    <td className="demo-cell demo-cell-50">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/09_kb_search.mov" 
-             controls muted preload="metadata" 
-             width="100%" 
-             className="demo-video"></video>
-    </td>
-  </tr>
+  <tbody>
+    <tr>
+      <td className="demo-cell demo-cell-50">
+        <strong>Knowledge Base Creation and Deletion</strong><br />Only supports single knowledge base operations
+      </td>
+      <td className="demo-cell demo-cell-50">
+        <strong>Knowledge Base Search</strong><br />Supports knowledge base name and description search
+      </td>
+    </tr>
+    <tr>
+      <td className="demo-cell demo-cell-50">
+        <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/08_kb_create_delete.mov" 
+               controls muted preload="metadata" 
+               width="100%" height="100%"
+               className="demo-video"></video>
+      </td>
+      <td className="demo-cell demo-cell-50">
+        <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/09_kb_search.mov" 
+               controls muted preload="metadata" 
+               width="100%" height="100%"
+               className="demo-video"></video>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 ---
@@ -201,9 +191,6 @@ When OCR and HiChunk configuration are enabled, the parsing stage of document up
 
 > 💡 **Important**: After completing each association configuration, you need to click the **"Save Association"** button to save the association configuration and avoid losing previous selections
 
-#### Feature Description
-
-{/* TODO: Add detailed content association and vectorization instructions */}
 
 #### Association Types
 
@@ -214,68 +201,70 @@ When OCR and HiChunk configuration are enabled, the parsing stage of document up
 #### Demo Examples
 
 <table>
-  <tr>
-    <td className="demo-cell demo-cell-33">
-      <strong>File Association</strong><br />Can select multiple files for association at once
-    </td>
-    <td className="demo-cell demo-cell-33">
-      <strong>Database Association</strong><br />Supports Sqlite and MySQL
-    </td>
-    <td className="demo-cell demo-cell-33">
-      <strong>Example Association</strong><br />Supports association of example Q&A pairs
-    </td>
-  </tr>
-  <tr>
-    <td className="demo-cell demo-cell-33">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/10_kb_file_association.mov" 
-             controls muted preload="metadata" 
-             width="100%" 
-             className="demo-video"></video>
-    </td>
-    <td className="demo-cell demo-cell-33">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/11_kb_db_association.mov" 
-             controls muted preload="metadata" 
-             width="100%" 
-             className="demo-video"></video>
-    </td>
-    <td className="demo-cell demo-cell-33">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/12_kb_qa_example.mov" 
-             controls muted preload="metadata" 
-             width="100%" 
-             className="demo-video"></video>
-    </td>
-  </tr>
-  <tr>
-    <td className="demo-cell demo-cell-33">
-      <strong>Knowledge Base Configuration View</strong><br />View association and build configurations
-    </td>
-    <td className="demo-cell demo-cell-33">
-      <strong>Knowledge Base Vectorization Build</strong><br />Unified build of different types of associated content
-    </td>
-    <td className="demo-cell demo-cell-33">
-      <strong>Knowledge Base Association Editing</strong><br />Supports editing and updating associated content
-    </td>
-  </tr>
-  <tr>
-    <td className="demo-cell demo-cell-33">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/13_kb_config_show.mov" 
-             controls muted preload="metadata" 
-             width="100%" 
-             className="demo-video"></video>
-    </td>
-    <td className="demo-cell demo-cell-33">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/14_kb_build.mov" 
-             controls muted preload="metadata" 
-             width="100%" 
-             className="demo-video"></video>
-    </td>
-    <td className="demo-cell demo-cell-33">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/15_kb_modify.mov" 
-             controls muted preload="metadata" 
-             width="100%" 
-             className="demo-video"></video>
-    </td>
-  </tr>
+  <tbody>
+    <tr>
+      <td className="demo-cell demo-cell-33">
+        <strong>File Association</strong><br />Can select multiple files for association at once
+      </td>
+      <td className="demo-cell demo-cell-33">
+        <strong>Database Association</strong><br />Supports Sqlite and MySQL
+      </td>
+      <td className="demo-cell demo-cell-33">
+        <strong>Example Association</strong><br />Supports association of example Q&A pairs
+      </td>
+    </tr>
+    <tr>
+      <td className="demo-cell demo-cell-33">
+        <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/10_kb_file_association.mov" 
+               controls muted preload="metadata" 
+               width="100%" height="100%"
+               className="demo-video"></video>
+      </td>
+      <td className="demo-cell demo-cell-33">
+        <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/11_kb_db_association.mov" 
+               controls muted preload="metadata" 
+               width="100%" height="100%"
+               className="demo-video"></video>
+      </td>
+      <td className="demo-cell demo-cell-33">
+        <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/12_kb_qa_example.mov" 
+               controls muted preload="metadata" 
+               width="100%" height="100%"
+               className="demo-video"></video>
+      </td>
+    </tr>
+    <tr>
+      <td className="demo-cell demo-cell-33">
+        <strong>Knowledge Base Configuration View</strong><br />View association and build configurations
+      </td>
+      <td className="demo-cell demo-cell-33">
+        <strong>Knowledge Base Vectorization Build</strong><br />Unified build of different types of associated content
+      </td>
+      <td className="demo-cell demo-cell-33">
+        <strong>Knowledge Base Association Editing</strong><br />Supports editing and updating associated content
+      </td>
+    </tr>
+    <tr>
+      <td className="demo-cell demo-cell-33">
+        <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/13_kb_config_show.mov" 
+               controls muted preload="metadata" 
+               width="100%" height="100%"
+               className="demo-video"></video>
+      </td>
+      <td className="demo-cell demo-cell-33">
+        <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/14_kb_build.mov" 
+               controls muted preload="metadata" 
+               width="100%" height="100%"
+               className="demo-video"></video>
+      </td>
+      <td className="demo-cell demo-cell-33">
+        <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/15_kb_modify.mov" 
+               controls muted preload="metadata" 
+               width="100%" height="100%"
+               className="demo-video"></video>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 ---
@@ -288,12 +277,6 @@ You can select configured Agents for conversations or Q&A for different tasks:
 - Some Agents require selecting a knowledge base or file before use
 - Provides a temporary file upload button, supports temporary file upload for Q&A, but the file will only be automatically associated with the current knowledge base and will not undergo vector construction
 
-#### Steps
-
-{/* TODO: Add detailed Agent selection and usage instructions */}
-
----
-
 ### 3.2 Memory Function
 
 In the frontend conversation interface, turn on the **"Memory"** switch in the bottom right corner to enable the two-tier memory mechanism. After enabling memory, the Agent will have:
@@ -301,24 +284,16 @@ In the frontend conversation interface, turn on the **"Memory"** switch in the b
 - **Short-term Memory**: Remembers conversation context to avoid repetitive questions
 - **Long-term Memory**: Accumulates successful experiences and prioritizes reuse when encountering similar problems
 
-#### Feature Description
-
-{/* TODO: Add detailed memory function instructions */}
-
----
-
 ### 3.3 Available Agent List
 
 #### 💬 Chat Agent
 
 **Features**:
+
 - Basic conversation Agent
 - Recommended to enable "Memory" to support multi-turn conversations
 
-**Use Cases**:
-{/* TODO: Add detailed use case descriptions */}
 
-**Demo Example**:
 
 <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/16_chat_agent.mov" 
        controls muted preload="metadata" 
@@ -333,10 +308,7 @@ In the frontend conversation interface, turn on the **"Memory"** switch in the b
 - Supports web search
 - Can access links to explore detailed content and answer
 
-**Use Cases**:
-{/* TODO: Add detailed use case descriptions */}
 
-**Demo Example**:
 
 <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/17_websearch_agent.mov" 
        controls muted preload="metadata" 
@@ -351,10 +323,7 @@ In the frontend conversation interface, turn on the **"Memory"** switch in the b
 - Must select a knowledge base
 - Supports vector retrieval and reranking
 
-**Use Cases**:
-{/* TODO: Add detailed use case descriptions */}
 
-**Demo Example**:
 
 <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/18_kbsearch_agent.mov" 
        controls muted preload="metadata" 
@@ -370,10 +339,7 @@ In the frontend conversation interface, turn on the **"Memory"** switch in the b
 - Supports vector retrieval and reranking
 - Supports question intent parsing and metadata filtering
 
-**Use Cases**:
-{/* TODO: Add detailed use case descriptions */}
 
-**Demo Example**:
 
 <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/19_meta_retrieval_agent.mov" 
        controls muted preload="metadata" 
@@ -385,14 +351,11 @@ In the frontend conversation interface, turn on the **"Memory"** switch in the b
 #### 📄 File QA Agent
 
 **Features**:
-- Must select a knowledge base和文件
+- Must select a knowledge base and a file
 - Supports Python reading and processing file content
 - Supports vector retrieval and reranking
 
-**Use Cases**:
-{/* TODO: Add detailed use case descriptions */}
 
-**Demo Example**:
 
 <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/20_file_qa_agent.mp4" 
        controls muted preload="metadata" 
@@ -404,14 +367,11 @@ In the frontend conversation interface, turn on the **"Memory"** switch in the b
 #### 📊 Excel Agent
 
 **Features**:
-- Must select a knowledge base和文件
+- Must select a knowledge base and an Excel file
 - Problem decomposition and data processing step decomposition
 - Python code execution and reflection
 
-**Use Cases**:
-{/* TODO: Add detailed use case descriptions */}
 
-**Demo Example**:
 
 <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/22_excel_agent.mp4" 
        controls muted preload="metadata" 
@@ -427,10 +387,7 @@ In the frontend conversation interface, turn on the **"Memory"** switch in the b
 - Problem decomposition and SQL code generation and execution
 - SQL query result display and reflection
 
-**Use Cases**:
-{/* TODO: Add detailed use case descriptions */}
 
-**Demo Example**:
 
 <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/21_text2sql_agent.mov" 
        controls muted preload="metadata" 
@@ -441,36 +398,15 @@ In the frontend conversation interface, turn on the **"Memory"** switch in the b
 
 ### 3.4 Memory Function Examples
 
-#### 🧠 Short-term Memory
+#### 🧠 Short-term and Long-term Memory
 
 **Features**:
-- Effective within Session
-- Used to support multi-turn conversations
+- Short-term memory: Effective within Session, used to support multi-turn conversations
+- Long-term memory: Long-term effectiveness, used to accumulate successful experiences
 
-**Use Cases**:
-{/* TODO: Add detailed use case descriptions */}
 
-**Demo Example**:
 
-<video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/23_memory_chat.mov" 
-       controls muted preload="metadata" 
-       width="100%" 
-       className="demo-video"></video>
-
----
-
-#### 🧠 Long-term Memory
-
-**Features**:
-- Long-term effectiveness
-- Used to accumulate successful experiences
-
-**Use Cases**:
-{/* TODO: Add detailed use case descriptions */}
-
-**Demo Example**:
-
-<video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/24_long_memory_chat.mov" 
+<video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/23_memory_chat_2.mov" 
        controls muted preload="metadata" 
        width="100%" 
        className="demo-video"></video>
@@ -483,10 +419,7 @@ In the frontend conversation interface, turn on the **"Memory"** switch in the b
 - Short-term memory is effective within Session
 - Long-term memory can avoid additional token consumption for similar problems
 
-**Use Cases**:
-{/* TODO: Add detailed use case descriptions */}
 
-**Demo Example**:
 
 <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/25_text2sql_memory.mov" 
        controls muted preload="metadata" 
@@ -495,16 +428,23 @@ In the frontend conversation interface, turn on the **"Memory"** switch in the b
 
 ---
 
-## Technical Features
+#### 🎯 QA Learning
 
-- **Zero Dependencies**: Pure native HTML + CSS + JavaScript implementation, no framework dependencies
-- **Streaming Response**: Supports streaming output, real-time display of AI responses
-- **Easy to Use**: Clean and intuitive user interface
+**Features**:
+- Record QA examples
+- Automatically learn Agent routing strategies
+
+
+
+<video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/26_qa_learning.mov" 
+       controls muted preload="metadata" 
+       width="100%" 
+       className="demo-video"></video>
 
 ---
 
 ## Related Documentation
 
-- [Environment Variables Configuration](environment-variables)
-- [Quick Start Guide](quickstart)
+- [Environment Variables Configuration](./environment-variables)
+- [Quick Start Guide](./quickstart)
 

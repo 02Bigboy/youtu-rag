@@ -1,5 +1,5 @@
 ---
-title: Deploying Youtu Parsing with Docker
+title: Deploying with Docker
 ---
 
 This document provides instructions for building a self-contained Docker image for Youtu Parsing that includes all model weights and dependencies.
@@ -23,7 +23,7 @@ git clone https://huggingface.co/tencent/Youtu-Parsing
 
 # Creating the Parsing Server Script
 
-Create a file named `youtu_parsing_server.py` with the server implementation. You can copy this from the [local deployment guide](/docs/en/youtu-parsing/deploying_locally) or create it with the following content:
+Create a file named `youtu_parsing_server.py` with the server implementation. You can copy this from the [local deployment guide](/docs/en/youtu-parsing/deploying-locally) or create it with the following content:
 
 ```python
 import base64

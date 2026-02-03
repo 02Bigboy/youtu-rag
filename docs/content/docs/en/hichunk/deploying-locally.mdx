@@ -1,26 +1,26 @@
 ---
-title: Deploying HiChunk Locally
+title: Deploying Locally
 ---
 
-This document provides instructions for serving HiChunk with vllm as a backend service for Youtu-RAG, providing hierarchical chunking capabilities.
+This document provides instructions for serving Youtu HiChunk with vllm as a backend service for Youtu-RAG, providing hierarchical chunking capabilities.
 
 **Requirements:**
 - CUDA version 12.x
 
-# Downloading the HiChunk Model Weights
+# Downloading the Youtu HiChunk Model Weights
 
-Download the pre-trained model weights from [our official repository](https://huggingface.co/tencent/HiChunk):
+Download the pre-trained model weights from [our official repository](https://huggingface.co/tencent/Youtu-HiChunk):
 
 > Note: TODO - Update the link once the model is available.
 
 ```bash
 git lfs install
-git clone https://huggingface.co/tencent/HiChunk
-cd HiChunk
+git clone https://huggingface.co/tencent/Youtu-HiChunk
+cd Youtu-HiChunk
 ```
 # Setting up the Environment
 
-Install the required dependencies for serving HiChunk with vllm
+Install the required dependencies for serving Youtu HiChunk with vllm
 
 ```bash
 uv venv hichunk --python 3.12
@@ -28,7 +28,7 @@ source hichunk/bin/activate
 uv pip install torch==2.7.0 vllm==0.9.1 transformers==4.53.0 liger_kernel
 ```
 
-# Registering the HiChunk model
+# Registering the Youtu HiChunk model
 
 Create a file named `utu_v1.py` inside the `vllm/model_executor/models/` directory of your vllm installation (if it does not already exist) with the following content:
 
@@ -1532,9 +1532,9 @@ cp utu_v1.py .venv/lib/python3.12/site-packages/vllm/model_executor/models/
 cp registry.py .venv/lib/python3.12/site-packages/vllm/model_executor/models/
 ```
 
-# Serving HiChunk with vLLM
+# Serving Youtu HiChunk with vLLM
 
-Run the following script to serve HiChunk model on port `8501` with vLLM:
+Run the following script to serve Youtu HiChunk model on port `8501` with vLLM:
 
 ```bash
 vllm serve \
@@ -1551,7 +1551,7 @@ vllm serve \
 
 # API Endpoints
 
-Once running, HiChunk is served via an OpenAI-compatible API. The following endpoints are available:
+Once running, Youtu HiChunk is served via an OpenAI-compatible API. The following endpoints are available:
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|

@@ -1,5 +1,5 @@
 ---
-title: Deploying Youtu Embedding with Docker
+title: Deploying with Docker
 ---
 
 This document provides instructions for building a self-contained Docker image for Youtu Embedding that includes all model weights and dependencies.
@@ -26,7 +26,7 @@ git clone https://huggingface.co/tencent/Youtu-Embedding
 
 # Creating the Embedding Server Script
 
-Create a file named `embedding_server.py` with the server implementation. You can copy this from the [local deployment guide](/docs/en/youtu-embedding/deploying_locally) or create it with the following content:
+Create a file named `embedding_server.py` with the server implementation. You can copy this from the [local deployment guide](/docs/en/youtu-embedding/deploying-locally) or create it with the following content:
 
 ```python
 import fastapi
