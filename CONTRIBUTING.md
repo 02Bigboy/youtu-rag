@@ -6,8 +6,8 @@ Thank you for considering contributing to Youtu-RAG! We welcome all forms of con
 
 ```bash
 # 1. Fork and clone the repository
-git clone https://github.com/YOUR_USERNAME/youtu-agentic-rag.git
-cd youtu-agentic-rag
+git clone https://github.com/YOUR_USERNAME/youtu-rag.git
+cd youtu-rag
 
 # 2. Install dependencies
 uv sync
@@ -41,7 +41,7 @@ Follow [Conventional Commits](https://www.conventionalcommits.org/):
 
 ## Reporting Issues
 
-When submitting issues on [GitHub Issues](https://github.com/TencentCloudADP/youtu-agentic-rag/issues), please provide:
+When submitting issues on [GitHub Issues](https://github.com/TencentCloudADP/youtu-rag/issues), please provide:
 - Environment info (Python version, OS)
 - Steps to reproduce
 - Expected vs actual behavior
