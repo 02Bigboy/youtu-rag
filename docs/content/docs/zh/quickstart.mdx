@@ -187,21 +187,21 @@ uv run uvicorn utu.rag.api.main:app --reload --host 0.0.0.0 --port 8000
 服务运行后，你可以通过 Web 界面开始使用 Youtu-RAG：
 
 #### 文件管理
-1. 点击左侧边栏的**"文件管理"**
+1. 点击左侧边栏的**源文件**
 2. 上传文件（PDF、Excel、图片等）
 3. 查看文件处理状态和预览内容
 
 #### 知识库管理
-1. 点击左侧边栏的**"知识库"**
+1. 点击左侧边栏的**知识库**
 2. 创建新的知识库
 3. 关联文件、数据库或问答示例
 4. 构建向量索引
 
 #### 智能对话
-1. 点击左侧边栏的**"对话"**
+1. 点击左侧边栏的**问AI**
 2. 选择一个智能体（Chat、KB Search、Text2SQL 等）
 3. 如果需要，选择一个知识库
-4. 启用**"记忆"**开关以更好地保持上下文
+4. 启用**记忆**开关以更好地保持上下文
 5. 开始聊天！
 
 详细使用说明，请参考 [WebUI 使用指南](./frontend)。
@@ -282,9 +282,8 @@ VECTOR_STORE_PATH=./rag_data/vector_store
 - **探索智能体**: 在 WebUI 中尝试不同的智能体来完成各种任务
 - **上传文档**: 用你自己的文档构建知识库
 - **启用记忆**: 打开记忆功能以获得更好的对话体验
-- **查看基准测试**: 在 [README](../../../README_ZH.md#基准测试) 中了解 Youtu-RAG 的性能
+- **查看基准测试**: 在 [README](https://github.com/TencentCloudADP/youtu-rag/blob/main/README_ZH.md#%E8%AF%84%E6%B5%8B%E5%9F%BA%E5%87%86) 中了解 Youtu-RAG 的性能
 
 更多详细文档：
 - [WebUI 使用指南](./frontend) - 使用 Web 界面的完整指南
 - [环境变量](./environment-variables) - 所有配置选项
-- [README](../../../README_ZH.md) - 项目概述和特性
