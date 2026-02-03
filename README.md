@@ -147,13 +147,13 @@ metadata_extraction: # Metadata extraction, enabled by default
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/01_upload_file.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/01_upload_file.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/02_pdf_file_example.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/02_pdf_file_example.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
@@ -169,13 +169,13 @@ metadata_extraction: # Metadata extraction, enabled by default
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/03_png_file_example.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/03_png_file_example.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/04_hichunk_example.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/04_hichunk_example.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
@@ -201,19 +201,19 @@ When OCR and HiChunk configurations are enabled, the parsing phase of document u
   </tr>
   <tr style="height: 320px;">
     <td style="border: 1px solid black; padding: 10px; width: 33%; vertical-align: middle; height: 320px;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/06_batch_delete_upload.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/06_batch_delete_upload.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 33%; vertical-align: middle; height: 320px;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/05_metadata_export_import.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/05_metadata_export_import.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 33%; vertical-align: middle; height: 320px;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/07_file_search.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/07_file_search.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
@@ -243,13 +243,13 @@ When OCR and HiChunk configurations are enabled, the parsing phase of document u
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/08_kb_create_delete.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/08_kb_create_delete.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/09_kb_search.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/09_kb_search.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
@@ -279,19 +279,19 @@ When OCR and HiChunk configurations are enabled, the parsing phase of document u
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px; width: 33%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/10_kb_file_association.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/10_kb_file_association.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 33%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/11_kb_db_association.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/11_kb_db_association.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 33%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/12_kb_qa_example.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/12_kb_qa_example.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
@@ -310,19 +310,19 @@ When OCR and HiChunk configurations are enabled, the parsing phase of document u
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px; width: 33%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/13_kb_config_show.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/13_kb_config_show.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 33%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/14_kb_build.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/14_kb_build.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 33%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/15_kb_modify.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/15_kb_modify.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
@@ -359,13 +359,13 @@ When OCR and HiChunk configurations are enabled, the parsing phase of document u
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/16_chat_agent.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/16_chat_agent.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/17_websearch_agent.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/17_websearch_agent.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
@@ -388,13 +388,13 @@ When OCR and HiChunk configurations are enabled, the parsing phase of document u
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/18_kbsearch_agent.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/18_kbsearch_agent.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/19_meta_retrieval_agent.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/19_meta_retrieval_agent.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
@@ -419,13 +419,13 @@ When OCR and HiChunk configurations are enabled, the parsing phase of document u
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/20_file_qa_agent.mp4" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/20_file_qa_agent.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/22_excel_agent.mp4" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/22_excel_agent.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
@@ -448,13 +448,13 @@ When OCR and HiChunk configurations are enabled, the parsing phase of document u
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/21_text2sql_agent.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/21_text2sql_agent.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/23_memory_chat_2.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/23_memory_chat_2.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
@@ -476,13 +476,13 @@ When OCR and HiChunk configurations are enabled, the parsing phase of document u
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/25_text2sql_memory.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/25_text2sql_memory.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v0.1.0/26_qa_learning.mov" 
+      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/26_qa_learning.mp4" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
