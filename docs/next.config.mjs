@@ -2,31 +2,13 @@ import { createMDX } from 'fumadocs-mdx/next';
 
 const withMDX = createMDX();
 
-// GitHub Pages 配置
-const isGithubPages = process.env.NEXT_PUBLIC_BASE_PATH;
-const basePath = isGithubPages ? process.env.NEXT_PUBLIC_BASE_PATH : '';
-
-// 只在生产构建时使用静态导出
-const isProduction = process.env.NODE_ENV === 'production';
-
 /** @type {import('next').NextConfig} */
 const config = {
   reactStrictMode: true,
   turbopack: false,
-  // 只在生产环境使用静态导出
-  ...(isProduction && { output: 'export' }),
-  trailingSlash: true,
-  // 使用相对路径，支持 file:// 协议
-  assetPrefix: '',
-  // 只在 GitHub Pages 部署时设置 basePath 和 assetPrefix
-  ...(isGithubPages && {
-    basePath: basePath,
-    assetPrefix: basePath,
-  }),
   // 图片配置
   images: {
-    // 静态导出模式必须禁用图片优化
-    unoptimized: true,
+    unoptimized: false,
     remotePatterns: [
       {
         protocol: 'https',
@@ -41,12 +23,8 @@ const config = {
     ],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  }
-};
-
-// 只在非静态导出模式下设置 headers
-if (!isGithubPages) {
-  config.headers = async () => [
+  },
+  headers: async () => [
     {
       source: '/(.*)',
       headers: [
@@ -56,7 +34,7 @@ if (!isGithubPages) {
         }
       ]
     }
-  ];
-}
+  ]
+};
 
 export default withMDX(config);
