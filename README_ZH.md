@@ -510,7 +510,7 @@ MinIO是一个高性能对象存储服务，用于存储上传的文档文件（
 
 | 模型 | HuggingFace | 部署方法 | 是否必选 |
 |:---|:---|:---|:---:|
-| [Youtu-Embedding ](https://github.com/TencentCloudADP/youtu-embedding) | [HuggingFace](https://huggingface.co/tencent/Youtu-Embedding) | [部署文档](https://xxxxxx) | ✅ 必选，或其他API服务 |
+| [Youtu-Embedding ](https://github.com/TencentCloudADP/youtu-embedding) | [HuggingFace](https://huggingface.co/tencent/Youtu-Embedding) | [部署文档](https://xxxxxx) | ✅ 必选，或其他 Embedding API 服务 |
 | [Youtu-Parsing](https://github.com/TencentCloudADP/youtu-parsing) | [HuggingFace](https://huggingface.co/spaces/tencent/Youtu-Parsing) | [部署文档](https://xxxxxx) | ⭕ 可选 |
 | [Youtu-HiChunk](https://github.com/TencentCloudADP/hichunk) | [HuggingFace](https://huggingface.co/spaces/tencent/HiChunk) | [部署文档](https://xxxx) | ⭕ 可选 |
 
@@ -545,7 +545,7 @@ UTU_LLM_API_KEY=your_deepseek_api_key  # 替换为你的API Key
 UTU_EMBEDDING_URL=http://localhost:8081
 UTU_EMBEDDING_MODEL=youtu-embedding-2B
 
-# Option 2: 其他API服务
+# Option 2: 其他Embedding API服务
 # UTU_EMBEDDING_URL=https://api.your-embedding-service.com
 # UTU_EMBEDDING_API_KEY=your_api_key
 # UTU_EMBEDDING_MODEL=model_name
@@ -645,8 +645,8 @@ Youtu-RAG提供完整的评测体系，支持多维度能力验证。
 
 ### 📖 阅读理解（长文本）
 
-**[FactGuard](https://arxiv.org/pdf/2504.05607)**：长文档单点事实核查、信息抽取、推理验证
-**[Sequential-NIAH](https://aclanthology.org/2025.emnlp-main.1497.pdf)**：长文档多点信息抽取、顺序信息提取
+- **[FactGuard](https://arxiv.org/pdf/2504.05607)**：长文档单点事实核查、信息抽取、推理验证
+- **[Sequential-NIAH](https://aclanthology.org/2025.emnlp-main.1497.pdf)**：长文档多点信息抽取、顺序信息提取
 
 <div align="center">
 
@@ -727,6 +727,8 @@ Youtu-RAG 基于多个开源项目的卓越成果构建而成：
 - **[Youtu-Embedding](https://github.com/TencentCloudADP/youtu-embedding)**：中文向量编码器
 - **[Youtu-Parsing](https://github.com/TencentCloudADP/youtu-parsing)**：文档解析模型
 - **[Youtu-HiChunk](https://github.com/TencentCloudADP/hichunk)**：文档分层模型
+- **[FactGuard](https://arxiv.org/pdf/2504.05607)**：（Benchmark）长文档单点事实核查、信息抽取、推理验证
+- **[Sequential-NIAH](https://aclanthology.org/2025.emnlp-main.1497.pdf)**：（Benchmark）长文档多点信息抽取、顺序信息提取
 
 特别感谢所有为本项目贡献代码、提出建议和报告问题的开发者！
 

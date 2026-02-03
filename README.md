@@ -67,7 +67,7 @@ Short-term conversational memory + long-term cross-session knowledge accumulatio
 </td>
 <td width="50%" valign="top">
 
-### 🤖 8 Ready-to-Use Agents
+### 🤖 Ready-to-Use Agents
 
 From simple conversations to complex orchestration, covering various application scenarios. Supports Web Search, KB Search, Meta Retrieval, Excel Research, Text2SQL, and more
 
@@ -510,7 +510,7 @@ For installation instructions, please refer to the official [MinIO repository](h
 
 | Model | HuggingFace | Deployment Method | Required |
 |:---|:---|:---|:---:|
-| [Youtu-Embedding ](https://github.com/TencentCloudADP/youtu-embedding) | [HuggingFace](https://huggingface.co/tencent/Youtu-Embedding) | [Deployment Docs](https://xxxxxx) | ✅ Required, or other API services |
+| [Youtu-Embedding ](https://github.com/TencentCloudADP/youtu-embedding) | [HuggingFace](https://huggingface.co/tencent/Youtu-Embedding) | [Deployment Docs](https://xxxxxx) | ✅ Required, or other Embedding API services |
 | [Youtu-Parsing](https://github.com/TencentCloudADP/youtu-parsing) | [HuggingFace](https://huggingface.co/spaces/tencent/Youtu-Parsing) | [Deployment Docs](https://xxxxxx) | ⭕ Optional |
 | [Youtu-HiChunk](https://github.com/TencentCloudADP/hichunk) | [HuggingFace](https://huggingface.co/spaces/tencent/HiChunk) | [Deployment Docs](https://xxxx) | ⭕ Optional |
 
@@ -544,7 +544,7 @@ UTU_LLM_API_KEY=your_deepseek_api_key  # Replace with your API Key
 UTU_EMBEDDING_URL=http://localhost:8081
 UTU_EMBEDDING_MODEL=youtu-embedding-2B
 
-# Option 2: Other API Services
+# Option 2: Other Embedding API Services
 # UTU_EMBEDDING_URL=https://api.your-embedding-service.com
 # UTU_EMBEDDING_API_KEY=your_api_key
 # UTU_EMBEDDING_MODEL=model_name
@@ -726,6 +726,8 @@ Youtu-RAG builds upon the excellent work of several open-source projects:
 - **[Youtu-Embedding](https://github.com/TencentCloudADP/youtu-embedding)**: Chinese vector encoder model
 - **[Youtu-Parsing](https://github.com/TencentCloudADP/youtu-parsing)**: Document parsing model 
 - **[Youtu-HiChunk](https://github.com/TencentCloudADP/hichunk)**: Hierarchical document chunking model
+- **[FactGuard](https://arxiv.org/pdf/2504.05607)**: Benchmark of long document single-point fact checking, information extraction, reasoning verification
+- **[Sequential-NIAH](https://aclanthology.org/2025.emnlp-main.1497.pdf)**: Benchmark of long document multi-point information extraction, sequential information extraction
 
 Special thanks to all developers who contributed code, suggestions, and reported issues to this project!
 
