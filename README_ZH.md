@@ -603,9 +603,9 @@ Youtu-RAG提供完整的评测体系，支持多维度能力验证。
 
 ### 🗄️ 结构化检索（Text2SQL）
 
-**能力**：自然语言转SQL、Schema理解、SQL执行
-**数据集**：自建Text2SQL数据集 (Multi-table、Complex excel、Domain table)
-**指标**：Accuracy (LLM Judge)
+- **能力**：自然语言转SQL、Schema理解、SQL执行
+- **数据集**：自建Text2SQL数据集 (Multi-table、Complex excel、Domain table)
+- **指标**：Accuracy (LLM Judge)
 
 <div align="center">
 
@@ -660,13 +660,13 @@ Youtu-RAG提供完整的评测体系，支持多维度能力验证。
 
 ### 📊 半结构化检索（Excel）
 
-**能力**：表格理解、数据分析、非标准表格解析
-**数据集**：自建Excel问答数据集（500条测试问题）
-**指标**：LLM Judge
-- **Accuracy**: 答案的事实正确性
-- **Analysis Depth**: 答案的分析质量和洞察力
-- **Feasibility**: 生成的代码/方案是否可执行
-- **Aesthetics**: 可视化图表的视觉质量
+- **能力**：表格理解、数据分析、非标准表格解析
+- **数据集**：自建Excel问答数据集（500条测试问题）
+- **指标**：LLM Judge
+  - **Accuracy**: 答案的事实正确性
+  - **Analysis Depth**: 答案的分析质量和洞察力
+  - **Feasibility**: 生成的代码/方案是否可执行
+  - **Aesthetics**: 可视化图表的视觉质量
 
 <div align="center">
 
@@ -810,11 +810,11 @@ Youtu-RAG提供完整的评测体系，支持多维度能力验证。
 
 ### 🏷️ 元数据检索
 
-**能力**：问题偏好理解、元数据过滤和重排、向量检索
-**数据集**：自建元数据检索数据集
-**指标**：
-- **Weighted NDCG@5**: 在前5个检索结果中，按准确顺序召回真实相关文档的能力指标
-- **Recall@all**: 所有的真实的相关文档中有多少被准确召回
+- **能力**：问题偏好理解、元数据过滤和重排、向量检索
+- **数据集**：自建元数据检索数据集
+- **指标**：
+  - **Weighted NDCG@5**: 在前5个检索结果中，按准确顺序召回真实相关文档的能力指标
+  - **Recall@all**: 所有的真实的相关文档中有多少被准确召回
 
 <div align="center">
 

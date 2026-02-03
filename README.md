@@ -604,9 +604,9 @@ Youtu-RAG provides a complete evaluation system, supporting multi-dimensional ca
 
 ### 🗄️ Structured Retrieval (Text2SQL)
 
-**Capability**: Natural language to SQL, Schema understanding, SQL execution
-**Dataset**: Self-built Text2SQL dataset (Multi-table, Complex excel, Domain table)
-**Metric**: Accuracy (LLM Judge)
+- **Capability**: Natural language to SQL, Schema understanding, SQL execution
+- **Dataset**: Self-built Text2SQL dataset (Multi-table, Complex excel, Domain table)
+- **Metric**: Accuracy (LLM Judge)
 
 <div align="center">
 
@@ -661,13 +661,13 @@ Youtu-RAG provides a complete evaluation system, supporting multi-dimensional ca
 
 ### 📊 Semi-Structured Retrieval (Excel)
 
-**Capability**: Table understanding, data analysis, non-standard table parsing
-**Dataset**: Self-built Excel Q&A dataset (500 test questions)
-**Metrics**: LLM Judge
-- **Accuracy**: Factual correctness of answers
-- **Analysis Depth**: Analysis quality and insight of answers
-- **Feasibility**: Whether generated code/solutions are executable
-- **Aesthetics**: Visual quality of visualization charts
+- **Capability**: Table understanding, data analysis, non-standard table parsing
+- **Dataset**: Self-built Excel Q&A dataset (500 test questions)
+- **Metrics**: LLM Judge
+  - **Accuracy**: Factual correctness of answers
+  - **Analysis Depth**: Analysis quality and insight of answers
+  - **Feasibility**: Whether generated code/solutions are executable
+  - **Aesthetics**: Visual quality of visualization charts
 
 <div align="center">
 
@@ -811,11 +811,11 @@ Youtu-RAG provides a complete evaluation system, supporting multi-dimensional ca
 
 ### 🏷️ Metadata Retrieval
 
-**Capability**: Question preference understanding, metadata filtering and reranking, vector retrieval
-**Dataset**: Self-built metadata retrieval dataset
-**Metrics**:
-- **Weighted NDCG@5**: Metric for recalling truly relevant documents in accurate order within the top 5 retrieval results
-- **Recall@all**: How many of all truly relevant documents are accurately recalled
+- **Capability**: Question preference understanding, metadata filtering and reranking, vector retrieval
+- **Dataset**: Self-built metadata retrieval dataset
+- **Metrics**:
+  - **Weighted NDCG@5**: Metric for recalling truly relevant documents in accurate order within the top 5 retrieval results
+  - **Recall@all**: How many of all truly relevant documents are accurately recalled
 
 <div align="center">
 
