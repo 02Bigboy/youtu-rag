@@ -147,13 +147,13 @@ metadata_extraction: # Metadata extraction, enabled by default
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/01_upload_file.mp4" 
+      <video src="https://github.com/user-attachments/assets/d8247dc2-f134-46da-9fd1-15c990445011" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/02_pdf_file_example.mp4" 
+      <video src="https://github.com/user-attachments/assets/e5568428-990a-4008-8808-dcbe80cb2757" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
@@ -169,13 +169,13 @@ metadata_extraction: # Metadata extraction, enabled by default
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/03_png_file_example.mp4" 
+      <video src="https://github.com/user-attachments/assets/7701152f-b55e-46c1-af33-ebafd1b2341e" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
     </td>
     <td style="border: 1px solid black; padding: 10px; width: 50%; vertical-align: top;">
-      <video src="https://github.com/miraclefish/Youtu-RAG-User-Guide/releases/download/v1.0.0/04_hichunk_example.mp4" 
+      <video src="https://github.com/user-attachments/assets/815cd47a-5137-483b-b4e7-f5205d7d0b03" 
              controls muted preload="metadata" 
              width="100%" 
              style="height: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; display: block;"></video>
