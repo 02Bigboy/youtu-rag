@@ -15,14 +15,14 @@ export function baseOptions(locale: string): BaseLayoutProps {
     i18n,
     nav: {
       title: (
-        <>
+        <div className="logo-container">
           <Image
             src={getAssetPath("/assets/logo.svg")}
             alt="Youtu-RAG"
-            width={100}
-            height={50}
+            fill
+            className="logo-image"
           />
-        </>
+        </div>
       )
     }
   };
