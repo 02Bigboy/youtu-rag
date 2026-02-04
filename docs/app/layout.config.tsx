@@ -17,13 +17,14 @@ export function baseOptions(locale: string): BaseLayoutProps {
       title: (
         <div className="logo-container">
           <Image
-            src={getAssetPath("/assets/logo.svg")}
+            src={getAssetPath("/assets/youtu-rag-logo.png")}
             alt="Youtu-RAG"
             fill
             className="logo-image"
           />
         </div>
-      )
+      ),
+      url: '/about.html'
     }
   };
 }

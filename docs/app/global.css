@@ -25,26 +25,27 @@ body {
 /* Logo container */
 .logo-container {
   position: relative;
-  width: 100px;
-  height: 50px;
+  width: 180px;
+  height: 40px;
 }
 
 @media (max-width: 768px) {
   .logo-container {
-    width: 80px;
-    height: 40px;
+    width: 140px;
+    height: 30px;
   }
 }
 
 @media (max-width: 480px) {
   .logo-container {
-    width: 60px;
-    height: 30px;
+    width: 100px;
+    height: 22px;
   }
 }
 
 .logo-image {
   object-fit: contain;
+  object-position: left center;
 }
 
 /* Demo videos */

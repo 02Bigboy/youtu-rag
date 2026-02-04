@@ -25,7 +25,9 @@ function shouldBypass(pathname: string) {
     pathname.startsWith('/api/') ||
     pathname.startsWith('/public/') ||
     pathname === '/sitemap.xml' ||
-    /\.(jpg|png|svg|gif)$/.test(pathname)
+    pathname === '/about.html' ||
+    pathname.startsWith('/assets/') ||
+    /\.(jpg|png|svg|gif|css|js|html)$/.test(pathname)
   );
 }
 
@@ -56,12 +58,11 @@ export function middleware(request: NextRequest) {
 
   const locale = resolveLocale(request);
 
+  // Redirect root path to /about.html
   if (pathname === '/' || pathname === '') {
     const url = request.nextUrl.clone();
-    url.pathname = DOCS_PREFIX;
-    const response = NextResponse.redirect(url);
-    setLocaleCookie(response, locale);
-    return response;
+    url.pathname = '/about.html';
+    return NextResponse.redirect(url);
   }
 
   if (pathname === DOCS_PREFIX || pathname === `${DOCS_PREFIX}/`) {
