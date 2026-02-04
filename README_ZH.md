@@ -1,12 +1,14 @@
 <div align="center">
-  <img src="docs/assets/Youtu-RAG-title.png" alt="Youtu-RAG" width="800">
+  <a href="https://youtu-rag-docs.vercel.app" target="_blank">
+    <img src="docs/assets/Youtu-RAG-title.png" alt="Youtu-RAG" width="800">
+  </a>
 </div>
 
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.12+-blue.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Documentation](https://img.shields.io/badge/docs-online-brightgreen.svg)](https://youtu-rag-docs.vercel.app/docs/zh)
+[![Documentation](https://img.shields.io/badge/docs-online-brightgreen.svg)](https://youtu-rag-docs.vercel.app)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)]()
 
 [English](README.md) | 简体中文 
@@ -22,7 +24,7 @@
 
 ---
 
-`Youtu-RAG` 是新一代智能体驱动的检索增强生成系统，基于 **"本地部署 · 自主决策 · 记忆驱动"** 范式构建。具备自主决策与记忆学习能力，是个人本地知识库管理和问答系统的最佳实践。
+**[Youtu-RAG](https://youtu-rag-docs.vercel.app)** 是新一代智能体驱动的检索增强生成系统，基于 **"本地部署 · 自主决策 · 记忆驱动"** 范式构建。具备自主决策与记忆学习能力，是个人本地知识库管理和问答系统的最佳实践。
 
 **核心理念**：
 - **本地部署**：所有组件支持本地部署，数据不出域，集成 MinIO 对象存储实现大规模文件本地化管理

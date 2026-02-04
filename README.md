@@ -1,12 +1,14 @@
 <div align="center">
-  <img src="docs/assets/Youtu-RAG-title.png" alt="Youtu-RAG" width="800">
+  <a href="https://youtu-rag-docs.vercel.app" target="_blank">
+    <img src="docs/assets/Youtu-RAG-title.png" alt="Youtu-RAG" width="800">
+  </a>
 </div>
 
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.12+-blue.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Documentation](https://img.shields.io/badge/docs-online-brightgreen.svg)](https://youtu-rag-docs.vercel.app/docs/en)
+[![Documentation](https://img.shields.io/badge/docs-online-brightgreen.svg)](https://youtu-rag-docs.vercel.app)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)]()
 
 English | [简体中文](README_ZH.md) 
@@ -22,7 +24,7 @@ English | [简体中文](README_ZH.md)
 
 ---
 
-`Youtu-RAG` is a next-generation agentic retrieval-augmented generation system built on the **"Local Deployment · Autonomous Decision · Memory-Driven"** paradigm. With autonomous decision-making and memory learning capabilities, it represents best practices for personal local knowledge base management and Q&A systems.
+**[Youtu-RAG](https://youtu-rag-docs.vercel.app)** is a next-generation agentic retrieval-augmented generation system built on the **"Local Deployment · Autonomous Decision · Memory-Driven"** paradigm. With autonomous decision-making and memory learning capabilities, it represents best practices for personal local knowledge base management and Q&A systems.
 
 **Core Concepts**:
 - **Local Deployment**: All components support local deployment with data staying within domain. Integrated with MinIO object storage for large-scale file local management.
