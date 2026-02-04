@@ -6,6 +6,7 @@ const translations = {
     nav_files: '源文件',
     nav_knowledge: '知识库',
     nav_chat: '问AI',
+    nav_documents: '文档',
 
     // Common
     loading: '加载中...',
@@ -349,7 +350,7 @@ const translations = {
     about_feature_file_desc: '以文件为核心的知识组织，支持 PDF、Excel、图片、数据库等多源异构数据接入。',
     about_feature_adaptive_title: '智能检索引擎',
     about_feature_adaptive_desc: '自主决策最优检索策略。支持向量检索、数据库检索、元数据过滤等多种模式。',
-    about_feature_ready_agents_title: '8种开箱即用Agent',
+    about_feature_ready_agents_title: '开箱即用Agent',
     about_feature_ready_agents_desc: '从简单对话到复杂编排，覆盖多种应用级场景。支持Web Search、KB Search、Meta Retrieval、Excel Research、Text2SQL等8+智能体。',
     about_feature_ui_title: '轻量级WebUI',
     about_feature_ui_desc: '纯原生 HTML + CSS + JavaScript 实现，无框架依赖。支持文件上传、知识库管理、AI对话、文档预览等完整功能。',
@@ -450,6 +451,7 @@ const translations = {
     nav_files: 'Files',
     nav_knowledge: 'Knowledge Base',
     nav_chat: 'Chat AI',
+    nav_documents: 'Documents',
 
     // Common
     loading: 'Loading...',
@@ -794,7 +796,7 @@ const translations = {
     about_feature_file_desc: 'File-centric knowledge organization, supporting access to multi-source heterogeneous data including PDF, Excel, images, databases, etc.',
     about_feature_adaptive_title: 'Agentic Retrieval Engine',
     about_feature_adaptive_desc: 'Autonomously determines optimal retrieval strategies. Supports vector retrieval, database queries, metadata filtering, and more.',
-    about_feature_ready_agents_title: '8 Ready-to-Use Agents',
+    about_feature_ready_agents_title: 'Ready-to-Use Agents',
     about_feature_ready_agents_desc: 'From simple conversations to complex orchestrations, covering a wide range of application-level scenarios. Supports over 8 AI agents including Web Search, KB Search, Meta Retrieval, Excel Research, and Text2SQL.',
     about_feature_ui_title: 'Lightweight WebUI',
     about_feature_ui_desc: 'Pure native HTML + CSS + JavaScript implementation with no framework dependencies. Supports file upload, knowledge base management, AI conversation, document preview, and more.',
