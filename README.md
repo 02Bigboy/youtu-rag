@@ -51,9 +51,9 @@ File-based knowledge organization, supporting multi-source heterogeneous data in
 
 ### 🎯 Adaptive Retrieval Engine
 
-Autonomously decides optimal retrieval strategies. Supports vector retrieval, database retrieval, metadata filtering, and more
+Autonomous decision-making on the optimal retrieval strategy, supporting a variety of tool calls such as web search, vector retrieval, metadata filtering, database queries, and code execution
 
-**Retrieval Modes**: `Vector Search` `SQL Query` `Metadata Filtering`
+**Retrieval Modes**: `Autonomous Decision` `Tool Call` `Diversified Data Sources`
 
 </td>
 </tr>
@@ -72,9 +72,9 @@ Short-term conversational memory + long-term cross-session knowledge accumulatio
 
 ### 🤖 Ready-to-Use Agents
 
-From simple conversations to complex orchestration, covering various application scenarios. Supports Web Search, KB Search, Meta Retrieval, Excel Research, Text2SQL, and more
+From simple conversations to complex orchestrations, covering a wide range of application-level scenarios. Supports over 8 AI agents including Web Search, KB Search, Meta Retrieval, Excel Agent, and Text2SQL
 
-**Application Scenarios**: `Structured Retrieval` `Reading Comprehension` `Metadata Retrieval`
+**Application Scenarios**: `Ready-to-Use` `Diverse Scenarios` `Complex Task Collaboration`
 
 </td>
 </tr>
