@@ -20,9 +20,9 @@ from .config import settings
 
 # 导入 ExcelAgent
 project_root = Path(__file__).parent.parent.parent.parent
-adg_path = project_root / "integrations" / "ADG" / "src" / "model" / "adg_benchmark"
-if str(adg_path) not in sys.path:
-    sys.path.insert(0, str(adg_path))
+dtr_path = project_root / "integrations" / "DTR"
+if str(dtr_path) not in sys.path:
+    sys.path.insert(0, str(dtr_path))
 from excel_agent import ExcelAgent
 
 logger = logging.getLogger(__name__)
