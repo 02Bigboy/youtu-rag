@@ -9,6 +9,7 @@ Supports:
 
 import logging
 import os
+import re
 import sqlite3
 from typing import Any
 
@@ -52,6 +53,19 @@ class KnowledgeCleanupManager:
         Returns:
             A dictionary of cleanup statistics
         """
+        # Validate and sanitize source_identifier to prevent injection attacks
+        try:
+            source_identifier = self._sanitize_source_identifier(source_identifier)
+        except ValueError as e:
+            error_msg = f"Invalid source_identifier: {e}"
+            logger.error(error_msg)
+            return {
+                "source_identifier": source_identifier,
+                "vector_chunks_deleted": 0,
+                "sqlite_tables_deleted": 0,
+                "errors": [error_msg]
+            }
+
         stats = {
             "source_identifier": source_identifier,
             "vector_chunks_deleted": 0,
@@ -224,6 +238,11 @@ class KnowledgeCleanupManager:
 
             try:
                 for table_name in tables_created:
+                    # Validate table name to prevent SQL injection
+                    if not self._is_valid_table_name(table_name):
+                        logger.warning(f"Invalid table name detected, skipping: {table_name}")
+                        continue
+
                     cursor = conn.execute(
                         "SELECT name FROM sqlite_master WHERE type='table' AND name=?",
                         (table_name,)
@@ -231,6 +250,8 @@ class KnowledgeCleanupManager:
                     if not cursor.fetchone():
                         continue
 
+                    # Use parameterized query for PRAGMA table_info
+                    # Note: SQLite doesn't support parameterized PRAGMA, so we validate table name first
                     columns_info = conn.execute(f'PRAGMA table_info("{table_name}")').fetchall()
 
                     for col_info in columns_info:
@@ -318,12 +339,20 @@ class KnowledgeCleanupManager:
         try:
             for table_name in tables_created:
                 try:
+                    # Validate table name to prevent SQL injection
+                    if not self._is_valid_table_name(table_name):
+                        logger.warning(f"Invalid table name detected, skipping: {table_name}")
+                        continue
+
                     cursor = conn.execute(
                         "SELECT name FROM sqlite_master WHERE type='table' AND name=?",
                         (table_name,)
                     )
 
                     if cursor.fetchone():
+                        # Use parameterized identifier - construct safe DROP TABLE statement
+                        # Note: SQLite doesn't support parameterized table names in DROP TABLE,
+                        # so we validate the table name first and use quoted identifier
                         conn.execute(f'DROP TABLE IF EXISTS "{table_name}"')
                         conn.commit()
                         deleted_count += 1
@@ -381,6 +410,13 @@ class KnowledgeCleanupManager:
             logger.warning(f"No kb_id provided for QA cleanup, skipping: {source_identifier}")
             return 0
 
+        # Validate source_identifier before using in query
+        try:
+            source_identifier = self._sanitize_source_identifier(source_identifier)
+        except ValueError as e:
+            logger.error(f"Invalid source_identifier in QA cleanup: {e}")
+            return 0
+
         conn = sqlite3.connect(self.relational_db_path)
         try:
             cursor = conn.execute(
@@ -409,6 +445,13 @@ class KnowledgeCleanupManager:
         Returns:
             Table name list
         """
+        # Validate source_identifier before querying
+        try:
+            source_identifier = self._sanitize_source_identifier(source_identifier)
+        except ValueError as e:
+            logger.error(f"Invalid source_identifier in table query: {e}")
+            return []
+
         try:
             import sys
             from pathlib import Path
@@ -455,6 +498,13 @@ class KnowledgeCleanupManager:
         if not source_identifier:
             return []
 
+        # Validate source_identifier before processing
+        try:
+            source_identifier = self._sanitize_source_identifier(source_identifier)
+        except ValueError as e:
+            logger.error(f"Invalid source_identifier in table inference: {e}")
+            return []
+
         filename = Path(source_identifier).stem
 
         clean_filename = "".join(c if c.isalnum() or c == "_" else "_" for c in filename)
@@ -480,6 +530,96 @@ class KnowledgeCleanupManager:
                 conn.close()
 
         return possible_names
+
+    def _is_valid_table_name(self, table_name: str) -> bool:
+        """Validate table name to prevent SQL injection.
+
+        Valid table names should only contain:
+        - Alphanumeric characters (a-z, A-Z, 0-9)
+        - Underscores (_)
+        - Must not be empty
+        - Must not be too long (max 64 characters)
+
+        Args:
+            table_name: Table name to validate
+
+        Returns:
+            True if valid, False otherwise
+        """
+        if not table_name or len(table_name) > 64:
+            return False
+
+        # Only allow alphanumeric characters and underscores
+        if not re.match(r'^[a-zA-Z0-9_]+$', table_name):
+            return False
+
+        return True
+
+    def _sanitize_source_identifier(self, source_identifier: str) -> str:
+        """Sanitize source identifier to prevent path traversal and injection attacks.
+
+        Supports Unicode characters (e.g., Chinese filenames) while preventing security risks.
+
+        This function ensures that source_identifier is safe to use in:
+        - File system operations
+        - Database queries
+        - Logging
+
+        Args:
+            source_identifier: Original source identifier (file name or path), supports Unicode
+
+        Returns:
+            Sanitized source identifier
+
+        Raises:
+            ValueError: If source_identifier is invalid or contains malicious patterns
+        """
+        if not source_identifier:
+            raise ValueError("source_identifier cannot be empty")
+
+        # Remove leading/trailing whitespace
+        source_identifier = source_identifier.strip()
+
+        # Check length limit (reasonable file path length)
+        if len(source_identifier) > 255:
+            raise ValueError(f"source_identifier too long: {len(source_identifier)} characters")
+
+        # Prevent path traversal attacks
+        if '..' in source_identifier:
+            raise ValueError("source_identifier contains path traversal pattern (..)")
+
+        # Prevent absolute paths (unless explicitly from a trusted source)
+        if source_identifier.startswith(('/')) and not source_identifier.startswith(('rag_data/', 'data/')):
+            logger.warning(f"Absolute path detected in source_identifier: {source_identifier}")
+
+        # Prevent null bytes
+        if '\x00' in source_identifier:
+            raise ValueError("source_identifier contains null byte")
+
+        # Check for suspicious SQL injection patterns
+        suspicious_patterns = [
+            r"['\";].*--",  # SQL comment injection
+            r"['\"];.*DROP\s+TABLE",  # DROP TABLE injection
+            r"['\"];.*DELETE\s+FROM",  # DELETE injection
+            r"['\"];.*INSERT\s+INTO",  # INSERT injection
+            r"['\"];.*UPDATE\s+",  # UPDATE injection
+            r"UNION\s+SELECT",  # UNION injection
+        ]
+
+        for pattern in suspicious_patterns:
+            if re.search(pattern, source_identifier, re.IGNORECASE):
+                raise ValueError(f"source_identifier contains suspicious SQL pattern: {source_identifier}")
+
+        # Prevent dangerous characters while allowing Unicode (e.g., Chinese filenames)
+        # Explicitly block characters that could be used for injection or command execution
+        dangerous_chars = ["'", '"', ';', '`', '|', '<', '>', '\n', '\r', '\t']
+        for char in dangerous_chars:
+            if char in source_identifier:
+                raise ValueError(
+                    f"source_identifier contains dangerous character: {repr(char)}"
+                )
+
+        return source_identifier
 
     async def cleanup_knowledge_base(self, kb_id: int, collection_name: str) -> dict[str, Any]:
         """Cleanup all the data in the knowledge base.
@@ -538,11 +678,19 @@ class KnowledgeCleanupManager:
                     try:
                         for table_name in excel_tables:
                             try:
+                                # Validate table name to prevent SQL injection
+                                if not self._is_valid_table_name(table_name):
+                                    logger.warning(f"Invalid table name detected, skipping: {table_name}")
+                                    continue
+
                                 cursor = conn.execute(
                                     "SELECT name FROM sqlite_master WHERE type='table' AND name=?",
                                     (table_name,)
                                 )
                                 if cursor.fetchone():
+                                    # Use parameterized identifier - construct safe DROP TABLE statement
+                                    # Note: SQLite doesn't support parameterized table names in DROP TABLE,
+                                    # so we validate the table name first and use quoted identifier
                                     conn.execute(f'DROP TABLE IF EXISTS "{table_name}"')
                                     stats["total_tables_deleted"] += 1
                                     logger.info(f"🗑️  Dropped table: {table_name}")
