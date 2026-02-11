@@ -1,4 +1,6 @@
+# DTR Framework Configuration
 type: custom
 
 config:
-  data_sample_rows: 150
+  # max_iterations
+  max_iterations: 20

@@ -15,9 +15,9 @@ from ..database import get_db, KBSourceConfig
 
 # 导入 ExcelAgentStreamEvent（保持与 dependencies.py 一致的导入方式）
 project_root = Path(__file__).parent.parent.parent.parent
-adg_path = project_root / "integrations" / "ADG" / "src" / "model" / "adg_benchmark"
-if str(adg_path) not in sys.path:
-    sys.path.insert(0, str(adg_path))
+dtr_path = project_root / "integrations" / "DTR"
+if str(dtr_path) not in sys.path:
+    sys.path.insert(0, str(dtr_path))
 
 try:
     from excel_agent import ExcelAgentStreamEvent
@@ -381,7 +381,7 @@ class ChatService:
                     if event.name == "excel_agent.plan.start":  # Analysis starts
                         yield format_sse_event({
                             "type": StreamEventType.DELTA,
-                            "content": f"正在解析 Excel 表格 {event.item.get('file_path', '')}\n构建 Meta Graph...",
+                            "content": f"正在解析 Excel 表格 {event.item.get('file_path', '')} ...",
                             "timestamp": datetime.now().isoformat()
                         })
                     
@@ -389,6 +389,7 @@ class ChatService:
                         yield format_sse_event({
                             "type": StreamEventType.DELTA,
                             "content": f"\n{event.item.get("content", "")}",
+                            "clean": event.item.get("clean", False),
                             "timestamp": datetime.now().isoformat()
                         })
                     
@@ -403,7 +404,7 @@ class ChatService:
                         yield format_sse_event({
                             "type": StreamEventType.EXCEL_AGENT_EVENT,
                             "title": f"Task: {event.item.get('operation', '')}",
-                            "content": "Generating ...",
+                            "content": "Reasoning ...",
                             "timestamp": datetime.now().isoformat()
                         })
                     
